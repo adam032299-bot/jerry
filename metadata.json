@@ -1,0 +1,8 @@
+{
+  "name": "Remix: 3D 恐怖迷宮遊戲",
+  "description": "在深灰色牆壁的 3D 恐怖迷宮中，使用 WASD 移動，尋找三個神秘物品「陳家睿」。小心隱藏在黑暗中的恐懼！",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

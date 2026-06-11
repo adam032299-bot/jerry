@@ -1,0 +1,2 @@
+            console.log("Parry on cooldown loop!");
+          // Set standard 1-second failure penalty cooldown

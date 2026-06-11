@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  @keyframes jitter {
+    0% { transform: translate(0,0); }
+    10% { transform: translate(-1px, -1px); }
+    20% { transform: translate(2px, 0); }
+    30% { transform: translate(-1px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-2px, 1px); }
+    60% { transform: translate(2px, 2px); }
+    70% { transform: translate(-1px, -2px); }
+    80% { transform: translate(2px, -1px); }
+    90% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0,0); }
+  }
+
+  @keyframes pulse-glitch {
+    0%, 100% { opacity: 1; filter: brightness(1); }
+    50% { opacity: 0.8; filter: brightness(1.2) contrast(1.2); }
+  }
+
+  @keyframes mashPulse {
+    0% { transform: scale(1); filter: brightness(1); box-shadow: 0 0 50px rgba(239,68,68,1); }
+    50% { transform: scale(1.4); filter: brightness(1.5); box-shadow: 0 0 100px rgba(255,100,100,1); }
+    100% { transform: scale(1.1); filter: brightness(1.1); box-shadow: 0 0 70px rgba(239,68,68,1); }
+  }
+
+  @keyframes noiseShift {
+    0% { background-position: 0px 0px; }
+    10% { background-position: -21px 53px; }
+    20% { background-position: 42px -13px; }
+    30% { background-position: -63px 25px; }
+    40% { background-position: 14px -47px; }
+    50% { background-position: -35px 12px; }
+    60% { background-position: 51px -55px; }
+    70% { background-position: -23px 44px; }
+    80% { background-position: 65px -22px; }
+    90% { background-position: -17px 31px; }
+    100% { background-position: 0px 0px; }
+  }
+}
+
+.animate-jitter {
+  animation: jitter 0.15s infinite;
+}
+
+.animate-pulse-glitch {
+  animation: pulse-glitch 2s infinite ease-in-out;
+}
+
+.animate-mash-pulse {
+  animation: mashPulse 0.1s ease-out forwards;
+}
+
+.animate-noise-shift {
+  animation: noiseShift 0.08s steps(2) infinite;
+}
